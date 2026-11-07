@@ -2,7 +2,7 @@
 
 ## Iniciar
 Abre o projeto e organiza o briefing. Não analisa nenhum arquivo.
-- **Conferir a pasta:** parece a raiz de um projeto, no padrão combinado? Se faltar alguma subpasta, pergunte se pode criar (vazia). Se a pasta não parecer um projeto, pergunte se o Claude Code foi aberto no lugar certo.
+- **Conferir a pasta:** parece a pasta de um vídeo? No padrão sugerido os arquivos ficam todos na raiz, sem subpastas: liste o que há e pergunte o que é cada um (câmera, gravação de tela, foto, roteiro, referência), anotando no estado. Crie só `_CLAUDE/`. Se a pessoa usa subpastas, siga o padrão dela. Se a pasta não parecer um projeto, pergunte se o Claude Code foi aberto no lugar certo.
 - **Projeto já iniciado** (o arquivo de estado existe): não sobrescreva nada; mostre o status e pergunte se é só para atualizar o briefing.
 - **Perfil:** com um perfil só, use esse; com mais de um, pergunte de quem é o vídeo e anote no estado.
 - **Briefing:** peça numa mensagem curta, sem formulário: "Me conta, do jeito que vier, sobre o que é esse vídeo e qualquer direcionamento que você já tenha." A pessoa costuma responder ditando.

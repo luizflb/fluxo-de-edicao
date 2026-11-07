@@ -1,8 +1,9 @@
 # Entrega no programa de edição (ou o vídeo pronto)
 
-Como o resultado de cada etapa chega à pessoa. Escolha o caminho na entrevista e escreva as regras dele nas skills que entregam algo (cortes, motion-render, câmera, sfx).
+Como o resultado de cada etapa chega à pessoa. Escolha o caminho na entrevista e escreva as regras dele nas skills que entregam algo (cortes, motion-render, câmera, sfx, legendas).
 
 ## Regras para qualquer caminho
+- **Por arquivo, sem mexer no computador.** O Claude gera a entrega por arquivo e não abre, não fecha e não controla o programa de edição (nem mouse, nem teclado), salvo se a pessoa pedir. Quando o formato exige o programa fechado, o Claude confere pelo processo e, se estiver aberto, pede para a pessoa fechar e espera.
 - **Teste curto primeiro.** Na primeira vez que um formato é usado (ou quando muda), gere um arquivo de teste com 3–4 clipes e peça para a pessoa abrir e conferir: abre, os clipes certos, o áudio certo, os marcadores visíveis, o tempo batendo. Anote o que foi confirmado num arquivo de validação na pasta de ferramentas. Só depois a etapa usa o formato de verdade.
 - **Copie, não chute.** Quando não souber como o programa representa algo (uma transição, um keyframe, uma trilha estéreo), peça para a pessoa montar aquilo no programa, exportar e mandar. Copie o formato exportado.
 - **Versões, nunca sobrescrever:** `<projeto>_cortes_v01`, `_v02`…; depois `<projeto>_final_v01`… Cada etapa continua a numeração.
@@ -36,6 +37,7 @@ O formato que funcionou no fluxo de referência é o **FCP 7 XML (xmeml)**, impo
 - **Final Cut Pro:** usa FCPXML, um formato diferente do FCP7.
 - **DaVinci Resolve:** importa XML e FCPXML, e tem API de scripts.
 - Em qualquer um: pesquise o formato atual, gere o teste curto e copie o que o próprio programa exporta.
+- **CapCut:** caminho D.
 - **Programas sem importação aberta:** siga o caminho C e entregue o vídeo pronto.
 
 ## Caminho C: sem programa (o Claude entrega o vídeo)
@@ -43,3 +45,19 @@ O formato que funcionou no fluxo de referência é o **FCP 7 XML (xmeml)**, impo
 - **Revisão:** a pessoa assiste e pede pelo chat, citando o tempo ("em 01:12 tira essa frase") ou o número do item. O Claude converte o tempo do vídeo para o tempo do arquivo original pela lista de cortes.
 - **Rascunho rápido:** para revisar, renderize em resolução menor; o final sai na resolução cheia.
 - Cada ajuste é um render novo: agrupe vários pedidos antes de renderizar.
+
+## Caminho D: CapCut (projeto gerado por arquivo)
+Não há importação oficial de XML no CapCut de computador. O que funcionou foi gerar um **projeto novo do próprio CapCut**, copiando a estrutura de um projeto real da pessoa. **Não é oficial:** uma atualização pode mudar o formato. Repita o teste curto quando o programa atualizar e tenha o caminho C como plano B.
+- **Programa fechado** ao gerar (confira pelo processo). Com ele aberto, o arquivo pode ser sobrescrito ou ignorado.
+- **Copie, não chute:** parta do `draft_content.json` e do `draft_meta_info.json` de um projeto que a pessoa montou, com as mesmas chaves e versões. Quando faltar um exemplo (máscara, efeito, texto), peça para ela montar aquilo uma vez e copie. Não copie arquivos de chave ou de trava (ex.: `crypto_key_store.dat`, `.locked`).
+- **Sempre um projeto novo** (`<projeto>_<etapa>_vNN`). Para registrar na lista de projetos, faça uma cópia de segurança do arquivo da lista antes e só acrescente a entrada nova.
+- **As etapas seguintes copiam o projeto anterior** (a pasta inteira) e acrescentam o que é delas: assim o que o CapCut já calculou (ex.: o recorte da pessoa) vem junto.
+- **Armadilhas encontradas:**
+  - o tempo dos keyframes é o tempo do arquivo de origem, não o do clipe;
+  - keyframes de escala no rosto já deixaram a imagem achatada, com faixa preta. Prefira escala e posição paradas em cada clipe, mudando só no corte, e confira no programa se um movimento for mesmo necessário;
+  - vídeo transparente funciona (ProRes 4444, WebM VP9);
+  - o removedor de fundo pode ser ligado pelo arquivo: o CapCut calcula o recorte quando o projeto abre;
+  - modelo de legenda copiado de outro projeto mostra o texto padrão dele: use texto simples com estilo;
+  - clonar um clipe de áudio de um modelo pode trazer um fade longo escondido: confira e tire;
+  - uma trilha de áudio vazia some ao abrir; a música cria a trilha dela quando é arrastada.
+- **Registro:** cada item testado vai para o arquivo de validação (o quê, versão do CapCut, data, resultado). Só use de verdade o que a pessoa confirmou no programa.

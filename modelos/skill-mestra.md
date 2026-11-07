@@ -26,6 +26,11 @@ Antes de tudo, leia `regras-comuns.md` (nesta pasta), uma vez por sessão.
 4. **Uma etapa por vez.** Não encadear etapas sozinho e não dar `/clear` (isso é sempre de <nome>).
 5. **Modelo:** lembre, numa linha, o modelo sugerido para a etapa. Trocar logo depois do `/clear` não custa nada.
 
+## Etapas opcionais
+- Nada de asset faltando: a etapa de assets vira `nao_precisa`.
+- Vídeo sem animação: as etapas de plano, assets e render de animação podem ser puladas, se <nome> pedir.
+- Vídeo sem legenda: a etapa de legendas pergunta primeiro e vira `nao_precisa`, se <nome> não quiser.
+
 ## /<skill mestra> aprendizados
 Siga a seção 5 das regras comuns.
 

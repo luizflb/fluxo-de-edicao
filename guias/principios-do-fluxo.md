@@ -43,6 +43,7 @@ Os bons costumes que fazem um fluxo de edição com o Claude funcionar vídeo ap
 - Regras técnicas (sincronia, nível de áudio, formato do arquivo) podem ser firmes.
 
 ## 9. Segurança
+- Entregar por arquivo, sem abrir nem controlar o programa de edição da pessoa, salvo se ela pedir.
 - Nunca mover, renomear ou apagar os arquivos do projeto da pessoa. Tudo o que o Claude gera fica na pasta de trabalho dele.
 - Nunca sobrescrever um arquivo já entregue (XML, render): sempre uma versão nova (`_v02`, `_v03`).
 - Apagar, quando precisar, é mover para uma pasta de espera e deixar a pessoa apagar depois. Mandar para a lixeira por script pode apagar de vez sem avisar.
@@ -64,6 +65,6 @@ Os bons costumes que fazem um fluxo de edição com o Claude funcionar vídeo ap
 | skill mestra, iniciar, assets | o mais leve que funcione bem | baixo | Organizar e encaminhar |
 | preparar | intermediário | médio | Quase tudo é script |
 | cortes, motion-mapa, motion-render, câmera | o mais capaz | alto | Erro aqui custa uma rodada inteira de revisão |
-| sfx, aplicar aprendizados | o mais capaz | médio | Gosto dentro de regras claras |
+| sfx, legendas, aplicar aprendizados | o mais capaz | médio | Gosto dentro de regras claras |
 
 - Trocar de modelo logo depois do `/clear` não custa nada. No meio de uma conversa longa, a troca reprocessa tudo.

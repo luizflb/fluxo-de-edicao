@@ -32,7 +32,14 @@ Para o vídeo inteiro ter ritmo sem desenhar cada corte à mão:
 - **Uma coisa por vez em cada camada:** dois movimentos de escala (ou de posição) ao mesmo tempo brigam. A aproximação lenta corre em paralelo, na camada dela.
 - **Nunca mostrar a borda do quadro:** com escala ≥100%, o deslocamento é limitado pela margem.
 
-## 5. Plano e revisão
+## 5. Gravação de tela (tutoriais)
+- Zoom no botão ou na opção citados, **sempre junto de uma ação**, nunca para disfarçar tela parada. Gravação com cursor visível pede zooms menores e calmos: o cursor já guia o olhar.
+- O tempo do zoom e da marcação vem do **toque real**: ache o quadro em que a tela muda (diferença entre quadros na região do botão), não só a palavra dita. Num trecho que ainda está rolando, a marcação entra quando a tela para.
+- O zoom nunca corta o texto do item destacado: se o rótulo e o botão não cabem juntos, use um zoom menor.
+- A marcação (anel, destaque) é renderizada junto com a tela, para acompanhar o zoom. Depois do destaque, volte para a tela inteira, a não ser que outra ação venha logo.
+- Mais simples e seguro: renderizar a tela já com zoom e marcação num vídeo só e entregar parado no programa, em vez de keyframes.
+
+## 6. Plano e revisão
 - O Claude escreve um rascunho com os movimentos numerados (`cam01`, `cam02`…): o quê, onde (palavra, tempo ou corte), duração, curva, de quanto a quanto. As travas vão à parte.
 - Um script calcula a base + os movimentos, gera keyframes densos com a curva embutida e avisa sobre conflitos.
 - Revisão por número: "cam07 mais lento", "cam05 mais forte", "cam12 tira", "no s014 não precisa punch".

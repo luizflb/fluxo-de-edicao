@@ -32,7 +32,7 @@ O Claude lê essa lista, mais a ideia e o storyboard de cada animação. Não pr
 7. **Sincronia:**
    - **impacto:** o transiente cai no frame do evento;
    - **whoosh:** o **pico** cai no frame da troca ou da chegada (quando o elemento freia), não no primeiro frame do movimento;
-   - **pop, clique e ding:** começam no evento;
+   - **pop, clique e ding:** começam no evento. Clique de tutorial vai no **toque real** da gravação (o quadro em que a tela muda), não na hora em que a marcação acende;
    - **whoosh de movimento de câmera:** o pico fica perto do começo do movimento;
    - para casar com a percepção, um som pode vir 1 frame adiantado, e camadas de apoio escalonadas em 1–2 frames dão profundidade.
 8. **O som combina com o movimento e o material.** Grande e lento pede whoosh grave e longo; pequeno e rápido, um som curto e agudo. Papel pede papel; tecnologia e IA, glitch e interface digital; cursor, clique; check, ding.

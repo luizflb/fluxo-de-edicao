@@ -1,13 +1,13 @@
 ---
 name: fluxo-de-edicao
-description: "Guia a pessoa a montar o próprio fluxo de edição de vídeo com o Claude Code (YouTube, reels, vídeo narrado ou outro formato): entrevista sobre o tipo de vídeo, o programa de revisão (ou nenhum), a transcrição, motion, câmera e som; analisa as referências dela para criar o estilo; e escreve as skills de cada etapa, a skill mestra, as regras comuns e o caderno de aprendizados, a partir de um fluxo de 8 etapas já testado em vídeos reais. Use em /fluxo-de-edicao, ou quando a pessoa pedir para montar, adaptar ou continuar o fluxo de edição dela."
+description: "Guia a pessoa a montar o próprio fluxo de edição de vídeo com o Claude Code (YouTube, reels, vídeo narrado ou outro formato): entrevista sobre o tipo de vídeo, o programa de revisão (ou nenhum), a transcrição, motion, câmera, som e legendas; analisa as referências dela para criar o estilo; e escreve as skills de cada etapa, a skill mestra, as regras comuns e o caderno de aprendizados, a partir de um fluxo de 9 etapas já testado em vídeos reais. Use em /fluxo-de-edicao, ou quando a pessoa pedir para montar, adaptar ou continuar o fluxo de edição dela."
 ---
 
 # fluxo-de-edicao
 
 Você vai ajudar a pessoa a construir o **fluxo de edição dela**: um conjunto de skills que editam vídeo com o Claude Code, etapa por etapa, no estilo dela.
 
-Você não edita vídeo nesta skill. Você conversa, decide junto e escreve as skills. O ponto de partida é um fluxo de 8 etapas já usado em vídeos reais (YouTube, apresentador falando para a câmera, revisão no Premiere). Ele é **sugestão, não molde**: tudo se adapta ao que a pessoa quer. Ela pode seguir o roteiro, perguntar à vontade ou mudar tudo.
+Você não edita vídeo nesta skill. Você conversa, decide junto e escreve as skills. O ponto de partida é um fluxo de 9 etapas já usado em vídeos reais (YouTube e reels, apresentador falando para a câmera, tutorial com gravação de tela, revisão no Premiere ou no CapCut). Ele é **sugestão, não molde**: tudo se adapta ao que a pessoa quer. Ela pode seguir o roteiro, perguntar à vontade ou mudar tudo.
 
 ## Como falar
 - Português, frases curtas, sem jargão sem explicar. Muita gente aqui nunca editou com código.
@@ -23,6 +23,7 @@ Você não edita vídeo nesta skill. Você conversa, decide junto e escreve as s
 | `guias/referencias.md` | Fase 3: como analisar referências e criar o perfil |
 | `guias/etapa-*.md` | Fase 5: o ofício de cada etapa, lido quando for escrever aquela skill |
 | `guias/oficio-motion.md`, `guias/hyperframes.md` | Fase 5, nas etapas de motion |
+| `guias/etapa-legendas.md` | Fase 5, na etapa de legendas |
 | `guias/entrega-no-editor.md` | Fase 5, em toda etapa que entrega para o programa de edição (ou renderiza o vídeo) |
 | `modelos/*.md` | Fase 5: os esqueletos das skills que você vai escrever |
 
@@ -51,7 +52,7 @@ Leia `guias/decisoes.md` e siga a ordem de lá. A primeira decisão é sempre **
 Leia `guias/referencias.md`. Guie a pessoa a juntar trechos de vídeos de que ela gosta, analise e escreva o **perfil** dela (identidade visual, estilo de motion, de câmera, de corte e de som). Sem referências, o resultado tende ao genérico: insista com gentileza, mas não trave a montagem (dá para começar com um perfil simples e completar depois).
 
 ## Fase 4. Plano do fluxo
-Proponha as etapas, partindo das 8 de referência e adaptando às respostas:
+Proponha as etapas, partindo das 9 de referência e adaptando às respostas:
 
 1. **iniciar:** abre o projeto e organiza o briefing.
 2. **preparar:** inventário da mídia, sincronia, transcrição com tempo por palavra, notas de edição faladas.
@@ -61,10 +62,11 @@ Proponha as etapas, partindo das 8 de referência e adaptando às respostas:
 6. **motion-render:** constrói e renderiza cada animação.
 7. **câmera:** zooms e movimentos de câmera casados com a fala e as animações.
 8. **sfx:** efeitos sonoros em camadas, alinhados ao que se vê.
+9. **legendas:** pergunta se o vídeo usa legenda e, se sim, coloca legendas curtas, de uma linha, logo abaixo do queixo.
 
 Mais a **skill mestra** (mostra onde o vídeo está e chama a etapa certa) e as **regras comuns** (o que vale para todas).
 
-Exemplos de adaptação: reels pode juntar etapas e pular assets; vídeo sem animação pula 4 a 6; quem não usa programa de edição ganha uma etapa final de render. Mostre a lista final com uma linha por etapa e espere a aprovação. Pergunte também o prefixo dos nomes (ex.: `edit-` gera `/edit-cortes`). A skill mestra não pode se chamar `fluxo-de-edicao`, que é esta.
+Exemplos de adaptação: reels pode juntar etapas e pular assets; vídeo sem animação pula 4 a 6; vídeo sem legenda marca a 9 como "não precisa"; quem não usa programa de edição ganha uma etapa final de render. Mostre a lista final com uma linha por etapa e espere a aprovação. Pergunte também o prefixo dos nomes (ex.: `edit-` gera `/edit-cortes`). A skill mestra não pode se chamar `fluxo-de-edicao`, que é esta.
 
 ## Fase 5. Escrever as skills
 Na ordem: regras comuns → skill mestra → uma etapa por vez, na ordem do fluxo. Para cada uma:

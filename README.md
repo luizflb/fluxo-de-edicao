@@ -1,10 +1,10 @@
 # Fluxo de edição com o Claude Code
 
-Uma skill gratuita que te guia, passo a passo, a montar o **seu** fluxo de edição de vídeo com o Claude Code: cortes, animações, movimentos de câmera e efeitos sonoros, no seu estilo.
+Uma skill gratuita que te guia, passo a passo, a montar o **seu** fluxo de edição de vídeo com o Claude Code: cortes, animações, movimentos de câmera, efeitos sonoros e legendas, no seu estilo.
 
 Ela não é um prompt mágico e não entrega o meu fluxo pronto. Ela conversa com você, pergunta o que você quer, analisa as referências de que você gosta e escreve as skills de cada etapa para o seu jeito de trabalhar: YouTube, reels, vídeo narrado, com ou sem programa de edição.
 
-O ponto de partida é um fluxo de 8 etapas que eu uso nos meus vídeos, com os bons costumes de animação e de fluxo que aprendi testando: curvas, ritmo, câmera, sincronia de som, as armadilhas do HyperFrames e do XML do Premiere. Sem a minha identidade visual: o estilo é o seu.
+O ponto de partida é um fluxo de 9 etapas usado em vídeos reais, com os bons costumes de animação e de fluxo que aprendi testando: curvas, ritmo, câmera, sincronia de som, as armadilhas do HyperFrames, do XML do Premiere e do projeto do CapCut. Sem identidade visual pronta: o estilo é o seu.
 
 ## O que você precisa
 - Assinatura do Claude (Pro ou superior).
@@ -15,13 +15,13 @@ O ponto de partida é um fluxo de 8 etapas que eu uso nos meus vídeos, com os b
 Abra o Claude Code e cole:
 
 ```
-Instala esta skill para mim: https://github.com/LeiteZ/fluxo-de-edicao
+Instala esta skill para mim: https://github.com/luizflb/fluxo-de-edicao
 ```
 
 Ou, pelo terminal:
 
 ```bash
-git clone https://github.com/LeiteZ/fluxo-de-edicao ~/.claude/skills/fluxo-de-edicao
+git clone https://github.com/luizflb/fluxo-de-edicao ~/.claude/skills/fluxo-de-edicao
 ```
 
 ## Como usar
@@ -60,7 +60,17 @@ Esqueceu o nome? Digite `/` para ver a lista de skills, ou pergunte ao Claude qu
 
 Tudo em texto. Leia, mude, adapte.
 
+## O que mudou em relação ao original
+Esta versão parte da [fluxo-de-edicao](https://github.com/LeiteZ/fluxo-de-edicao), de Lucas Leite, e acrescenta o que funcionou editando vídeos reais com ela:
+- **Etapa 9, legendas:** pergunta se o vídeo usa legenda; legendas curtas (até 3 palavras), de uma linha, logo abaixo do queixo, com entrada rápida e sem fade de saída.
+- **Sem subpastas como padrão:** todos os arquivos na raiz da pasta do vídeo; você diz o que é cada um, e o Claude só cria `_CLAUDE/`.
+- **CapCut:** projeto gerado por arquivo, com o programa fechado, sempre em versão nova, e as armadilhas já encontradas.
+- **Área segura do vertical** (Reels, TikTok, Shorts) valendo para animação, zoom, marcação e legenda.
+- **Tutoriais de tela:** zoom e marcação no toque real, sem cortar o texto do item.
+- **Animação no tempo da fala:** a saída ligada a uma palavra só acontece durante ela, medida pelo áudio real.
+- **Entrega sem mexer no computador:** o Claude não abre nem controla o programa de edição, salvo se você pedir.
+
 ## Licença
 MIT. Use, mude e compartilhe à vontade.
 
-Feito por Lucas Leite.
+Original feito por Lucas Leite. Modificações por LuizFLB.

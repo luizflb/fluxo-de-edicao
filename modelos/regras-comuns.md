@@ -16,6 +16,9 @@ Perfil: `<pasta de ferramentas>/perfis/<nome>/`. O nome do perfil vem do estado 
 - Falar com <nome> em português, de forma curta.
 - Nunca mover, renomear ou apagar arquivos do projeto. Tudo o que o Claude gera fica em `_CLAUDE/`.
 - Nunca sobrescrever um arquivo já entregue: versão nova.
+- Entregar por arquivo, sem abrir nem controlar o <programa de edição>, salvo se <nome> pedir. Se ele precisar estar fechado, pedir para <nome> fechar e esperar.
+- Arquivos do vídeo na raiz da pasta, sem subpastas (ou o padrão de <nome>, se for outro). O papel de cada arquivo fica no estado.
+- <Só em vídeo vertical> Tudo o que é essencial (animação, marcação, zoom de tela, legenda) fica na área segura de <Reels/TikTok/Shorts>: longe dos botões da lateral, das bordas que o celular corta e da barra de baixo.
 
 ## 2. Estado do vídeo sem ler inteiro
 O `_CLAUDE/projeto.json` cresce muito. Ler e mudar sempre pelo script de estado:

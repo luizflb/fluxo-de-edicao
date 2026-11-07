@@ -13,9 +13,10 @@ Cada vídeo tem um arquivo de estado em `_CLAUDE/projeto.json`. É a memória do
     "iniciar": "concluido",
     "preparar": "concluido",
     "cortes": "aguardando_aprovacao",
-    "motion_mapa": "pendente"
+    "motion_mapa": "pendente",
+    "legendas": "pendente"
   },
-  "midia": { "...": "arquivos, fps, proxies, sync, áudio principal" },
+  "midia": { "...": "arquivos (com o papel de cada um), fps, proxies, sync, áudio principal" },
   "transcricao": { "...": "caminhos dos arquivos por câmera e dos silêncios" },
   "notas_edicao": [ { "id": "n01", "texto": "usa esse take", "etapa": "cortes", "interpretacao": "..." } ],
   "cortes": { "versao": 1, "segmentos": [ { "id": "s001", "video": "cam01", "inicio": 3.10, "fim": 15.62, "texto": "..." } ] },
@@ -23,6 +24,7 @@ Cada vídeo tem um arquivo de estado em `_CLAUDE/projeto.json`. É a memória do
   "motions": { "trechos": {}, "itens": [ { "id": "mo01", "status": "aprovado", "render": { "arquivo": "...", "versao": 1 } } ] },
   "camera": { "movimentos": [], "recortes": [] },
   "sfx": { "itens": [], "recortes": [] },
+  "legendas": { "entrega": "...", "quebras": "_CLAUDE/legendas/quebras_v01.txt", "itens": 0 },
   "pendencias": [ { "id": "p01", "etapa": "motion_render", "texto": "mo05 mais lento" } ]
 }
 ```
