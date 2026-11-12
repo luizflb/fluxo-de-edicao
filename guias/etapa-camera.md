@@ -14,7 +14,7 @@ Para o vídeo inteiro ter ritmo sem desenhar cada corte à mão:
 ## 2. Casar com as animações (o que mais dá dinamismo)
 - **Antes de uma animação que entra no corte:** a câmera acelera para dentro do rosto nos últimos 0,2–0,25 s (`power4.in`, +7% a +18%), na direção da entrada.
 - **Depois de uma animação que sai com speed ramp ou movimento rápido:** a câmera chega andando na mesma direção e velocidade e freia (`expo.out`, 0,4–0,6 s, partindo de ~1,3–1,5× o alvo). Saída para cima → chega de baixo. Saída para a esquerda → chega da direita.
-- **Sobreposição lateral:** o rosto vai para o terço (escala ~140%) só enquanto a animação está na tela, e volta ao centro quando ela sai (`power2.inOut`, ~0,7 s). Aproximação suave para o lado, começando um pouco antes, e não salto + deslize.
+- **Sobreposição lateral:** o rosto vai para o terço (escala ~140%) só enquanto a animação está na tela (a partir de quando ela começa a aparecer, não do início do trecho), e volta ao centro quando ela sai (`power2.inOut`, ~0,7 s). Aproximação suave para o lado, começando um pouco antes, e não salto + deslize.
 - **Cards que entram embaixo:** o rosto sobe um pouco, para não ficar atrás deles.
 - **Sob tela cheia** a câmera não aparece: não gaste movimento ali.
 

@@ -5,7 +5,7 @@ Siga esta ordem. Para cada decisão: explique as opções em poucas linhas, dê 
 ## 1. Onde a pessoa revisa (pergunte primeiro: muda o fluxo inteiro)
 - **Num programa de edição** (Premiere, DaVinci Resolve, Final Cut, outro): o Claude entrega um arquivo de projeto (XML ou similar) que abre no programa com os cortes, as animações, a câmera e os sons em trilhas separadas. A pessoa revisa, faz o retoque fino à mão e continua dona do acabamento. É o caminho mais flexível para quem já edita.
 - **Sem programa:** o Claude entrega o vídeo pronto, renderizado. A pessoa revisa assistindo e pede ajustes pelo chat. Mais simples, mas cada ajuste vira um render novo, e o retoque fino é sempre por pedido.
-- **CapCut (computador):** não tem importação oficial, mas o projeto é um arquivo legível. Dá para gerar um projeto novo por arquivo, com o programa fechado, e ele abre com tudo em trilhas. Não é oficial: uma atualização pode quebrar, então vale o teste curto e um plano B em vídeo pronto. Ver `entrega-no-editor.md`, caminho D.
+- **CapCut (computador):** não tem importação oficial, mas o projeto é um arquivo legível. Dá para gerar o projeto por arquivo, com o programa fechado, e ele abre com tudo em trilhas. Não é oficial: uma atualização pode quebrar, então vale o teste curto e um plano B em vídeo pronto. Ver `entrega-no-editor.md`, caminho D.
 - **Programas sem formato de importação aberto** (ex.: alguns editores de celular): na prática, é o caminho "sem programa". O Claude renderiza e a pessoa importa o vídeo pronto, se quiser acabar lá.
 - Detalhes de cada caminho: `entrega-no-editor.md`.
 

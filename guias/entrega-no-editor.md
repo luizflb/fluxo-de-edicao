@@ -6,7 +6,9 @@ Como o resultado de cada etapa chega à pessoa. Escolha o caminho na entrevista 
 - **Por arquivo, sem mexer no computador.** O Claude gera a entrega por arquivo e não abre, não fecha e não controla o programa de edição (nem mouse, nem teclado), salvo se a pessoa pedir. Quando o formato exige o programa fechado, o Claude confere pelo processo e, se estiver aberto, pede para a pessoa fechar e espera.
 - **Teste curto primeiro.** Na primeira vez que um formato é usado (ou quando muda), gere um arquivo de teste com 3–4 clipes e peça para a pessoa abrir e conferir: abre, os clipes certos, o áudio certo, os marcadores visíveis, o tempo batendo. Anote o que foi confirmado num arquivo de validação na pasta de ferramentas. Só depois a etapa usa o formato de verdade.
 - **Copie, não chute.** Quando não souber como o programa representa algo (uma transição, um keyframe, uma trilha estéreo), peça para a pessoa montar aquilo no programa, exportar e mandar. Copie o formato exportado.
-- **Versões, nunca sobrescrever:** `<projeto>_cortes_v01`, `_v02`…; depois `<projeto>_final_v01`… Cada etapa continua a numeração.
+- **Um projeto só por vídeo**, `<projeto>`, atualizado no lugar: um projeto novo a cada etapa ou revisão enche o programa de cópias e confunde. Durante as etapas, a revisão é por **prévia MP4** no chat (rascunho com FFmpeg, como no caminho C); o arquivo do programa é gerado na última etapa feita, e só então a pessoa abre. Antes de atualizar, cópia em backups. As versões (`_v01`, `_v02`…) ficam só nos arquivos de trabalho de `_CLAUDE/`.
+- **Nada de clipe curtinho na câmera:** um clipe por corte; mudança de zoom ou de posição dentro do corte é keyframe no mesmo clipe, nunca um clipe novo. Confira por script que nenhum clipe tem menos de ~0,5 s: pedacinhos de poucos quadros aparecem como cortes estranhos e estouram o áudio quando o clipe tem normalização.
+- **Normalização de volume por clipe:** meça a loudness numa janela de pelo menos ~3 s em volta do clipe. Em poucos quadros o medidor (ebur128) devolve -70 LUFS, e o programa sobe o ganho até estourar.
 - **Apontar para os originais**, nunca para os proxies, com caminho absoluto. A pessoa conecta os proxies no programa.
 - **Tempo em frames inteiros.** Converta segundos para frames com a taxa real e arredonde para o frame mais próximo, num lugar só (uma função usada por todos os scripts). Com 29,97: `frame = round(segundos × 30000 / 1001)`, timebase 30 com NTSC ligado, timecode não-drop. Erro de taxa aparece como descompasso crescente no fim do vídeo.
 - **Marcadores na linha do tempo** em vez de listas no chat: dúvida de take, sugestão, asset faltando, efeito para aplicar na pós. Use uma cor fixa para os do Claude; os da pessoa são de qualquer outra cor e, na volta, viram instrução.
@@ -47,14 +49,15 @@ O formato que funcionou no fluxo de referência é o **FCP 7 XML (xmeml)**, impo
 - Cada ajuste é um render novo: agrupe vários pedidos antes de renderizar.
 
 ## Caminho D: CapCut (projeto gerado por arquivo)
-Não há importação oficial de XML no CapCut de computador. O que funcionou foi gerar um **projeto novo do próprio CapCut**, copiando a estrutura de um projeto real da pessoa. **Não é oficial:** uma atualização pode mudar o formato. Repita o teste curto quando o programa atualizar e tenha o caminho C como plano B.
+Não há importação oficial de XML no CapCut de computador. O que funcionou foi gerar um **projeto do próprio CapCut**, copiando a estrutura de um projeto real da pessoa. **Não é oficial:** uma atualização pode mudar o formato. Repita o teste curto quando o programa atualizar e tenha o caminho C como plano B.
 - **Programa fechado** ao gerar (confira pelo processo). Com ele aberto, o arquivo pode ser sobrescrito ou ignorado.
 - **Copie, não chute:** parta do `draft_content.json` e do `draft_meta_info.json` de um projeto que a pessoa montou, com as mesmas chaves e versões. Quando faltar um exemplo (máscara, efeito, texto), peça para ela montar aquilo uma vez e copie. Não copie arquivos de chave ou de trava (ex.: `crypto_key_store.dat`, `.locked`).
-- **Sempre um projeto novo** (`<projeto>_<etapa>_vNN`). Para registrar na lista de projetos, faça uma cópia de segurança do arquivo da lista antes e só acrescente a entrada nova.
-- **As etapas seguintes copiam o projeto anterior** (a pasta inteira) e acrescentam o que é delas: assim o que o CapCut já calculou (ex.: o recorte da pessoa) vem junto.
+- **Um projeto só, `<projeto>`**, gerado na última etapa feita (antes disso, prévias MP4). Na primeira vez, registre na lista de projetos com uma cópia de segurança do arquivo da lista antes, acrescentando só a entrada nova. Nas revisões, **atualize no lugar**: cópia da pasta em backups e regrave só o `draft_content.json`.
+- **Ao atualizar no lugar, mantenha o `id`** do `draft_content.json` igual ao `main_timeline_id` de `Timelines/project.json`. Com id novo, o CapCut não abre o projeto (e ainda grava referências ao id inexistente em `timeline_layout.json` e `draft_biz_config.json`).
+- O que o CapCut já calculou (ex.: o recorte da pessoa) fica na pasta `matting/` do projeto: reaproveite copiando essa pasta, sem calcular de novo.
 - **Armadilhas encontradas:**
-  - o tempo dos keyframes é o tempo do arquivo de origem, não o do clipe;
-  - keyframes de escala no rosto já deixaram a imagem achatada, com faixa preta. Prefira escala e posição paradas em cada clipe, mudando só no corte, e confira no programa se um movimento for mesmo necessário;
+  - o tempo dos keyframes (`time_offset`) é o tempo do arquivo de origem (`source_timerange.start` + o tempo dentro do clipe), não o do clipe: gravado pelo começo do clipe, o movimento cai fora do lugar;
+  - keyframes de escala no rosto já deixaram a imagem achatada, com faixa preta. Prefira escala e posição paradas em cada clipe, mudando só no corte; quando o enquadramento precisa mudar dentro de um corte, use keyframe no mesmo clipe (nunca divida o clipe) e confira o trecho no programa;
   - vídeo transparente funciona (ProRes 4444, WebM VP9);
   - o removedor de fundo pode ser ligado pelo arquivo: o CapCut calcula o recorte quando o projeto abre;
   - modelo de legenda copiado de outro projeto mostra o texto padrão dele: use texto simples com estilo;

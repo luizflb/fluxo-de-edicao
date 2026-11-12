@@ -13,6 +13,7 @@ O primeiro corte limpo: escolhe os takes, tira erros, falsas largadas, notas de 
 - O Claude escolhe pelo texto, não pela entrega (voz, expressão, olhar). Com dois takes bons e escolha difícil, escolha um e **marque** o outro.
 - **Escolhe e descarta entre ideias e takes, nunca no meio da frase.**
 - **Pausas:** corta as consideráveis; o quanto de ar fica é do perfil.
+- **Recomeços dentro da frase** ("e depois... depois é só você criar", "então isso é um... então isso é um detalhe"): corta a tentativa abandonada e fica só o último take limpo. Palavra com duração anormal na transcrição (mais de ~0,8 s) costuma esconder um recomeço: retranscreva o trecho antes de decidir.
 - **Hesitações** ("ééé", "hum", "tipo"): corta só quando estiver isolada por silêncio dos dois lados e for longa. A colada na fala fica: pela transcrição não dá para saber se o corte ficaria estranho, e quem julga é a pessoa.
 - **Notas de edição:** o trecho inteiro sai (de "nota de edição" até "fim da nota").
 - **Ordem:** a gravada. Reordenar, só sugerir no resumo, e só se for forte (uma frase de impacto que funcionaria muito melhor no começo).

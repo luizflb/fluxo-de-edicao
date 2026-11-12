@@ -64,7 +64,7 @@ Tudo em texto. Leia, mude, adapte.
 Esta versão parte da [fluxo-de-edicao](https://github.com/LeiteZ/fluxo-de-edicao), de Lucas Leite, e acrescenta o que funcionou editando vídeos reais com ela:
 - **Etapa 9, legendas:** pergunta se o vídeo usa legenda; legendas curtas (até 3 palavras), de uma linha, logo abaixo do queixo, com entrada rápida e sem fade de saída.
 - **Sem subpastas como padrão:** todos os arquivos na raiz da pasta do vídeo; você diz o que é cada um, e o Claude só cria `_CLAUDE/`.
-- **CapCut:** projeto gerado por arquivo, com o programa fechado, sempre em versão nova, e as armadilhas já encontradas.
+- **CapCut:** projeto gerado por arquivo, com o programa fechado, um projeto só por vídeo (atualizado no lugar, com prévias MP4 durante as etapas), e as armadilhas já encontradas.
 - **Área segura do vertical** (Reels, TikTok, Shorts) valendo para animação, zoom, marcação e legenda.
 - **Tutoriais de tela:** zoom e marcação no toque real, sem cortar o texto do item.
 - **Animação no tempo da fala:** a saída ligada a uma palavra só acontece durante ela, medida pelo áudio real.

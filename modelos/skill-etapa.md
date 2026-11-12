@@ -40,7 +40,7 @@ Se a etapa anterior não estiver `concluido`, pare e sugira terminá-la.
 Curto: o que foi feito, o que precisa da atenção de <nome>, o caminho da entrega. Marque a etapa como `aguardando_aprovacao`.
 
 ## Revisão
-<Como <nome> devolve: por número (`<id>NN mais …`), por tempo ou pela volta do programa. Ajustar só o que foi citado, gerar versão nova, anotar aprendizados no caderno.>
+<Como <nome> devolve: por número (`<id>NN mais …`), por tempo ou pela volta do programa. Ajustar só o que foi citado, gerar versão nova dos arquivos de trabalho e da prévia (o projeto no programa é um só, atualizado no lugar), anotar aprendizados no caderno.>
 
 ## Aprovação
 Marque `concluido`, diga quantos aprendizados ficaram anotados e sugira `/clear` e `/<skill mestra>`.

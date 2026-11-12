@@ -64,6 +64,8 @@ O contraste de velocidades é o que dá fluidez: entrada rápida sobre câmera l
 - **A chegada de um speed ramp nunca para seco:** freia longa e suave e continua andando.
 - **Corte com assentamento:** a cena nova entra ~5% maior e assenta em ~6 f.
 - Variar o tipo de troca ao longo do vídeo; não repetir a mesma em sequência.
+- **Tela cheia nunca fica vazia na troca:** o elemento principal aparece logo que a tela muda, sem quadros de fundo sozinho.
+- **Tela cheia que acaba num corte não termina seca:** sai revelando a câmera (a animação recua, abre ou desliza e mostra o apresentador por trás).
 
 ## 5. Entradas e saídas
 - **Entrada:** ~0,5 s, opacidade e foco antes. Do zero (ou de ~60% + opacidade 0) ao tamanho final.

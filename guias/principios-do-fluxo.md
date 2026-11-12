@@ -45,7 +45,7 @@ Os bons costumes que fazem um fluxo de edição com o Claude funcionar vídeo ap
 ## 9. Segurança
 - Entregar por arquivo, sem abrir nem controlar o programa de edição da pessoa, salvo se ela pedir.
 - Nunca mover, renomear ou apagar os arquivos do projeto da pessoa. Tudo o que o Claude gera fica na pasta de trabalho dele.
-- Nunca sobrescrever um arquivo já entregue (XML, render): sempre uma versão nova (`_v02`, `_v03`).
+- Arquivos de trabalho e renders (XML, MP4, motion) nunca são sobrescritos: sempre uma versão nova (`_v02`, `_v03`). O projeto no programa de edição é a exceção: um só por vídeo, atualizado no lugar, com cópia antes.
 - Apagar, quando precisar, é mover para uma pasta de espera e deixar a pessoa apagar depois. Mandar para a lixeira por script pode apagar de vez sem avisar.
 - Mudança no próprio fluxo (skills, scripts, perfil): com o "sim" da pessoa, e de preferência com um histórico de versões (git local) para poder voltar.
 
