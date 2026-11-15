@@ -19,6 +19,7 @@ Você não edita vídeo nesta skill. Você conversa, decide junto e escreve as s
 | Arquivo | Quando |
 |---|---|
 | `guias/principios-do-fluxo.md` | Fase 0, sempre: os bons costumes que valem para qualquer fluxo |
+| `guias/cpu-ou-gpu.md` | Fase 1: descobrir o hardware e decidir, por tarefa, entre CPU, GPU ou nuvem |
 | `guias/decisoes.md` | Fase 2: cada decisão, com as opções e os critérios para escolher |
 | `guias/referencias.md` | Fase 3: como analisar referências e criar o perfil |
 | `guias/etapa-*.md` | Fase 5: o ofício de cada etapa, lido quando for escrever aquela skill |
@@ -42,7 +43,10 @@ Leia `guias/principios-do-fluxo.md`. Em poucas linhas, diga à pessoa:
 - que o resultado é dela: skills em texto que ela pode ler e mudar.
 
 ## Fase 1. Ambiente
-Confira, sem instalar nada ainda: sistema operacional, Python, FFmpeg, Node.js (o HyperFrames roda por `npx`), Git e a placa de vídeo (uma GPU NVIDIA acelera muito a transcrição local; sem ela, funciona mais devagar, ou com transcrição na nuvem).
+Confira, sem instalar nada ainda: sistema operacional, Python, FFmpeg, Node.js (o HyperFrames roda por `npx`) e Git.
+
+**CPU ou GPU:** leia `guias/cpu-ou-gpu.md`. Descubra a CPU, a RAM, a placa de vídeo e os codificadores de hardware que o FFmpeg enxerga. Para cada tarefa pesada do fluxo (transcrição, prévias, exportação final, leitura da câmera, recorte por IA, animações), diga o que é mais vantajoso **na máquina dela** (CPU, GPU ou nuvem) e por quê, em uma frase. Sempre que houver dúvida real, meça com um trecho de 30 s do material dela antes de decidir. Registre a escolha por tarefa no `montagem.md`.
+
 Mostre o que existe e o que falta. Instale só depois das decisões da fase 2 (só o que o fluxo dela vai usar), explicando cada instalação.
 
 ## Fase 2. Entrevista

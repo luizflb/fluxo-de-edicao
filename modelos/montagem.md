@@ -10,7 +10,8 @@ O caderno da montagem do fluxo. Fica na pasta de ferramentas da pessoa e é atua
 Fase atual: <0–7> · Atualizado em <data>
 
 ## Ambiente
-- Sistema: <…> · Python: <…> · FFmpeg: <…> · Node.js: <…> · GPU: <…>
+- Sistema: <…> · Python: <…> · FFmpeg: <…> · Node.js: <…>
+- CPU: <modelo, núcleos> · RAM: <…> · GPU: <modelo, VRAM> · Codificadores de hardware testados: <…>
 - Instalado nesta montagem: <…>
 
 ## Decisões
@@ -18,6 +19,7 @@ Fase atual: <0–7> · Atualizado em <data>
 - Tipo e formato: <…>
 - Pastas: projeto <padrão>; ferramentas <caminho>
 - Transcrição: <…>
+- Processamento (CPU, GPU ou nuvem, por tarefa, com o tempo medido): <transcrição · prévias · final · recorte · animações>
 - Notas faladas: "<abertura>" … "<fechamento>"
 - Animação: <sim/não, ferramenta, densidade>
 - Câmera: <…>

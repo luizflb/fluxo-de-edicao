@@ -33,7 +33,7 @@ No Claude Code, digite:
 
 Ela começa a te guiar:
 
-1. **Ambiente:** confere o que já está instalado.
+1. **Ambiente:** confere o que já está instalado e o seu hardware, e decide, tarefa por tarefa, se é mais vantajoso usar a CPU, a GPU ou a nuvem.
 2. **Entrevista:** tipo de vídeo, formato, programa de edição (ou nenhum), transcrição, animação, câmera e som.
 3. **Referências:** você junta trechos de vídeos de que gosta, e ela analisa e cria o seu perfil de estilo.
 4. **Plano do fluxo:** as etapas, adaptadas para você.
@@ -68,6 +68,7 @@ Esta versão parte da [fluxo-de-edicao](https://github.com/LeiteZ/fluxo-de-edica
 - **Área segura do vertical** (Reels, TikTok, Shorts) valendo para animação, zoom, marcação e legenda.
 - **Tutoriais de tela:** zoom e marcação no toque real, sem cortar o texto do item.
 - **Animação no tempo da fala:** a saída ligada a uma palavra só acontece durante ela, medida pelo áudio real.
+- **CPU ou GPU:** na montagem, a skill olha a sua máquina e escolhe, para cada tarefa (transcrição, prévias, exportação, recorte por IA, animações), o que roda melhor nela, medindo quando há dúvida.
 - **Entrega sem mexer no computador:** o Claude não abre nem controla o programa de edição, salvo se você pedir.
 
 ## Licença

@@ -14,7 +14,7 @@ Abre o projeto e organiza o briefing. Não analisa nenhum arquivo.
 ## Preparar
 Transforma o bruto em algo que o Claude consegue ler: o inventário, a sincronia, a transcrição com tempo por palavra e as notas faladas.
 
-- **Ferramentas, na primeira vez:** FFmpeg/ffprobe, Python num ambiente próprio na pasta de ferramentas e a transcrição escolhida. Com GPU NVIDIA, confirme que a versão do PyTorch reconhece a placa antes de transcrever (placas novas pedem versões recentes de CUDA); se cair para CPU sem avisar, fica muito lento.
+- **Ferramentas, na primeira vez:** FFmpeg/ffprobe, Python num ambiente próprio na pasta de ferramentas e a transcrição escolhida. Com GPU NVIDIA, confirme que a versão do PyTorch reconhece a placa antes de transcrever (placas novas pedem versões recentes de CUDA); se cair para CPU sem avisar, fica muito lento. Siga a linha **Processamento** do `montagem.md` (decidida com `cpu-ou-gpu.md`) e avise quando a GPU escolhida não estiver disponível.
 - **Inventário** (ffprobe em cada arquivo): duração, fps, resolução, codec, se tem áudio, data de gravação. Ordem pela data de gravação (metadado; se faltar, pelo nome).
   - **Alertas:** arquivo ilegível, vídeo sem áudio, fps diferente entre arquivos e **taxa de quadros variável (VFR)**, comum em gravação de tela e problemática para sync e para o programa.
   - **Vídeo principal:** a câmera. Todos os tempos do projeto ficam no tempo dos arquivos da câmera.

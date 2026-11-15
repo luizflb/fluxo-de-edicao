@@ -26,7 +26,7 @@ O que importa comparar:
 - **Tempo por palavra**, preciso. Os cortes, as animações e os sons se alinham por ele.
 - **Mantém as hesitações** ("ééé", "hum", recomeços)? Para cortar, ajuda ver as muletas. Transcrição que limpa o texto esconde o que precisa sair.
 - **Português** bem reconhecido, incluindo nomes próprios e termos técnicos (dá para passar uma lista de termos).
-- **Local ou nuvem:** local é gratuito e privado, mas precisa de máquina boa (GPU acelera muito). Nuvem é rápida em qualquer máquina e cobra por hora de áudio.
+- **Local ou nuvem:** local é gratuito e privado, mas precisa de máquina boa (GPU acelera muito). Nuvem é rápida em qualquer máquina e cobra por hora de áudio. Use a escolha de processamento da fase 1 (`cpu-ou-gpu.md`): sem GPU compatível, compare o tempo da CPU com o custo da nuvem para a duração típica dos vídeos dela.
 - **Opções conhecidas:** WhisperX (local, gratuito, Whisper + alinhamento por palavra) e ElevenLabs Scribe (nuvem, marca hesitações e eventos de áudio como risada). Existem outras; pesquise o estado atual.
 - **Armadilha:** o Whisper às vezes "engole" takes repetidos ou inventa frases quando recebe um contexto inicial. Depois de transcrever, procure trechos com som e sem palavra e retranscreva esses trechos.
 
